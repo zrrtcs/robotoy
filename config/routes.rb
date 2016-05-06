@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   
-  root 'index#robotarena'
+  root 'robotarena#index'
 
-  get 'index/robotarena'
+  get 'robotarena/map'
+
+  match 'robot/move/:direction' => 'robot#move', via: [:get, :post]
+  match 'robot/face/:direction' => 'robot#face', via: [:get, :post]      
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

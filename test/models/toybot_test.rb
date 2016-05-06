@@ -11,10 +11,8 @@ class ToybotTest < ActiveSupport::TestCase
   
   test "Toybot must have an original placement" do
     @tb.placement 1, 2, "NORTH"
-    byebug  
     refute_nil @tb.pos_x
     refute_nil @tb.pos_y
-    # byebug
     refute_nil @tb.face
   end
   

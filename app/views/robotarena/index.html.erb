@@ -6,7 +6,13 @@
 		<% 5.times do |y| %>
 		<tr class="y<%=y%>">
 			<% 5.times do |x| %>
-			<td class="box x<%=x%>"></td>
+			<td class="box x<%=x%>">
+				<%if (x==@tb.pos_x && y==@tb.pos_y)%>
+					<div class="robot">
+						<%= image_tag "aibo-g2.png", class: "robot-img" %>
+					</div>
+				<%end%>
+			</td>
 			<% end %>
 		</tr>	
 		<% end %>
@@ -16,4 +22,7 @@
 		<%= @tb %>
 	</textarea>
 
+</div>
+<div id="cheatsheet">
+	
 </div>

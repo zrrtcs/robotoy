@@ -1,8 +1,17 @@
 class Toybot < ActiveRecord::Base 
-	# attr_accessor :pos_x, :pos_y, :face
+	attr_accessor :pos_x, :pos_y, :face
 
-	def create_record
-		tb = Toybot.create
+	def self.summon
+		tb = 
+			if Toybot.any? 
+				Toybot.first
+			else 
+				Toybot.create
+				tb.placement 0, 0, "NORTH"
+			end
+		
+		tb.save
+		tb
 	end
 	# def initialize(pos_x=0, pos_y=0, face="NORTH")
 	#   @pos_x, @pos_y, @face = pos_x, pos_y, face
@@ -15,6 +24,7 @@ class Toybot < ActiveRecord::Base
         @pos_x = x
         @pos_y = y
         @face = face
+        self
     end
     
     def fallen?
