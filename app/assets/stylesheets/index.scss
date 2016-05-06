@@ -1,0 +1,42 @@
+@import "bourbon";
+@import "neat";
+body{
+  background: #4D4250;
+  // @include outer-container;
+}
+
+h1#title{
+  color: #F6D169;
+  text-align: center;
+  font-size: 5em;
+  @media only screen and (max-device-width: 640px)
+  {
+  }
+  // font-size: 10em;
+}
+#arena-container{
+  position: relative;
+  width: 25em;
+  margin: 0 auto;
+  #arena{
+    // width: 25em;
+    margin: 0 auto;
+    background:#F6D169;
+    color: #241628;
+    .box{
+      // position: 
+      background: #F6D169;
+      width: 5em;
+      height: 5em;
+      border: 1px solid #241628;
+      border-radius: 6px;
+    }
+    float: left;
+  }
+  #robocode{
+    width: 385px;
+    // width: 400px;
+    height: 37em;
+    float: right;
+  }
+}

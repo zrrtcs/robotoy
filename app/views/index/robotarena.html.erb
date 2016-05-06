@@ -1,0 +1,19 @@
+<h1 id="title">RobotFairé!</h1>
+
+<div id="arena-container">
+	
+	<table id="arena">
+		<% 5.times do |y| %>
+		<tr class="y<%=y%>">
+			<% 5.times do |x| %>
+			<td class="box x<%=x%>"></td>
+			<% end %>
+		</tr>	
+		<% end %>
+	</table>
+
+	<textarea name="" id="robocode" cols="30" rows="10">
+		<%= @tb %>
+	</textarea>
+
+</div>
